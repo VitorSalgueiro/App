@@ -4,13 +4,13 @@ const User = require('../Model/User')
 module.exports = {
   //Index traz todos os registros pelo methodo Get
   async index(req,res){
-    //Busca todos os registros
+    //Busca todos os registross
     let users = await User.find();
     return res.json(users);
   },
 
   async login(req, res){
-    //Busca todos os registros
+    //Busca todos os registross
     console.log('busca usuario', req.body.email, req.body.senha)
     let users = await User.findOne({
                                     email : req.body.email.trim(),
@@ -20,7 +20,7 @@ module.exports = {
     return res.json({users});
   },
 
-  //show traz um registro onde o id do registro é igual ao id passado na url
+  //show traz um registro onde o id do registro é igual ao id assado na url
   async show(req, res){
     //Busca um registro no banco
     let user = await User.findOne({_id : req.params.id});
@@ -49,7 +49,7 @@ module.exports = {
     }
   },
   
-  //update pega o id, busca no banco esse registro, altera ele no controlador e manda gravar
+  //update pega o id, busca no banco esse registro, alreta ele no controlador e manda gravar
   async update(req, res){
     //recupero o registro
     let user = await User.findOne({_id : req.params.id});
@@ -65,7 +65,7 @@ module.exports = {
     return res.json(user);
   },
 
-  //delete = apaga o registro de cordo com o id passado no parametro
+  //delete = apaga o registro de cordo com o id pasasado no parametro
   async destroy(req, res){
     let user = await User.deleteOne({_id : req.params.id});
     return res.json(user);

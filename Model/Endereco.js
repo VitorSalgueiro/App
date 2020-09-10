@@ -1,3 +1,4 @@
+
 const mongoose = require('mongoose');
 
 const EnderecoSchema =  new mongoose.Schema({
@@ -5,12 +6,12 @@ const EnderecoSchema =  new mongoose.Schema({
     logradouro : String,
     complemento : String,
     bairro : String,
-    localidade : String,
+    localidade: String,
     uf : String,
-    ibge : Number,
+    ibge: Number, 
     user_id : {
-        type: mongoose.Schema.Types.ObjectId,
-        ref: 'User'
+        type : mongoose.Schema.Types.ObjectId,
+        ref: 'User'  
     }
 });
 

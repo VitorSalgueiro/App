@@ -12,7 +12,7 @@ module.exports = {
     return res.json(Enderecos);
   },
 
-  //show traz um registro onde o id do registro é igual ao id passado na url
+  //show traz um registro onde o id do registro é igual ao id assado na url
   async show(req, res){
     //Busca um registro no banco
     let Endereco = await Endereco.findOne({_id : req.params.id});
