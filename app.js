@@ -12,8 +12,6 @@ const app = express();
 const port = 3000;
 const hostname = "192.168.100.65";
 
-//Acessar site da Atlas Mongo DB - Criar uma conta e criar um cluster Free 
-mongoose.connect('mongodb+srv://Hericson:tads2020@cluster0-mhxlq.mongodb.net/Biqueira?retryWrites=true&w=majority',
 {
     useNewUrlParser: true,
     useUnifiedTopology: true,
